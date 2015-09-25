@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69018B619E608DF39932939C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 205FFAFD7624F07497B1A61F /* libPods.a */; };
 		B8289EC31BB4CDBE00BFD89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8289EC21BB4CDBE00BFD89D /* AppDelegate.swift */; };
 		B8289EC61BB4CDBE00BFD89D /* ShipIOTesting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8289EC41BB4CDBE00BFD89D /* ShipIOTesting.xcdatamodeld */; };
 		B8289EC81BB4CDBE00BFD89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8289EC71BB4CDBE00BFD89D /* ViewController.swift */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		205FFAFD7624F07497B1A61F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		75167DD26755AC602DECFE29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		821A03A0AA9E298FA4A1EA79 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8289EBD1BB4CDBE00BFD89D /* ShipIOTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipIOTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8289EC11BB4CDBE00BFD89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8289EC21BB4CDBE00BFD89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69018B619E608DF39932939C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1B3ED727D56BDCB551640F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				205FFAFD7624F07497B1A61F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8289EB41BB4CDBE00BFD89D = {
 			isa = PBXGroup;
 			children = (
 				B8289EBF1BB4CDBE00BFD89D /* ShipIOTesting */,
 				B8289ED81BB4CDBE00BFD89D /* ShipIOTestingTests */,
 				B8289EBE1BB4CDBE00BFD89D /* Products */,
+				D704E41B8345AA21A69D9B00 /* Pods */,
+				1E1B3ED727D56BDCB551640F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +130,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D704E41B8345AA21A69D9B00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75167DD26755AC602DECFE29 /* Pods.debug.xcconfig */,
+				821A03A0AA9E298FA4A1EA79 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8289EDF1BB4CDBE00BFD89D /* Build configuration list for PBXNativeTarget "ShipIOTesting" */;
 			buildPhases = (
+				ABFD41CBD1B638857303E35C /* Check Pods Manifest.lock */,
 				B8289EB91BB4CDBE00BFD89D /* Sources */,
 				B8289EBA1BB4CDBE00BFD89D /* Frameworks */,
 				B8289EBB1BB4CDBE00BFD89D /* Resources */,
+				F85A8237F2DA9547336EFC64 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +185,8 @@
 		B8289EB51BB4CDBE00BFD89D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = mundomo;
 				TargetAttributes = {
@@ -209,6 +237,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABFD41CBD1B638857303E35C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F85A8237F2DA9547336EFC64 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8289EB91BB4CDBE00BFD89D /* Sources */ = {
@@ -342,6 +403,7 @@
 		};
 		B8289EE01BB4CDBE00BFD89D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75167DD26755AC602DECFE29 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShipIOTesting/Info.plist;
@@ -352,6 +414,7 @@
 		};
 		B8289EE11BB4CDBE00BFD89D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821A03A0AA9E298FA4A1EA79 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShipIOTesting/Info.plist;
@@ -413,6 +476,7 @@
 				B8289EE11BB4CDBE00BFD89D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8289EE21BB4CDBE00BFD89D /* Build configuration list for PBXNativeTarget "ShipIOTestingTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +485,7 @@
 				B8289EE41BB4CDBE00BFD89D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

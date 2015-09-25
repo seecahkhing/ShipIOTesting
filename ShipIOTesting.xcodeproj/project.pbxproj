@@ -192,6 +192,7 @@
 				TargetAttributes = {
 					B8289EBC1BB4CDBE00BFD89D = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 99LGA87FUX;
 					};
 					B8289ED41BB4CDBE00BFD89D = {
 						CreatedOnToolsVersion = 6.4;
@@ -406,9 +407,11 @@
 			baseConfigurationReference = 75167DD26755AC602DECFE29 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mundomo.com Incorporated";
 				INFOPLIST_FILE = ShipIOTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0275e232-6d23-45ee-8d0f-1d2a528bba85";
 			};
 			name = Debug;
 		};
@@ -417,9 +420,11 @@
 			baseConfigurationReference = 821A03A0AA9E298FA4A1EA79 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mundomo.com Incorporated";
 				INFOPLIST_FILE = ShipIOTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0275e232-6d23-45ee-8d0f-1d2a528bba85";
 			};
 			name = Release;
 		};
